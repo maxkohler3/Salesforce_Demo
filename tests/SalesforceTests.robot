@@ -19,7 +19,7 @@ Entering A Lead
     Picklist                  Salutation                  Ms.
     TypeText                  First Name                  Tina
     TypeText                  Last Name                   Smith
-    Picklist                  Lead Status                 Open
+    Picklist                  Lead Status                 Qualified
     TypeText                  Phone                       +12234567858449             First Name
     TypeText                  Company                     Growmore                    Last Name
     TypeText                  Title                       Manager                     Address Information
@@ -33,7 +33,7 @@ Entering A Lead
     
     ClickText                 Details
     VerifyField               Name                        Ms. Tina Smith
-    VerifyField               Lead Status                 Open
+    VerifyField               Lead Status                 Qualified
     VerifyField               Phone                       +12234567858449
     VerifyField               Company                     Growmore
     VerifyField               Website                     https://www.growmore.com/
