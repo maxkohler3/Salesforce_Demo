@@ -7,8 +7,8 @@ Library                   String
 
 *** Variables ***
 ${BROWSER}               chrome
-${username}              pace.delivery1@qentinel.com.demonew
-${login_url}             https://qentinel--demonew.my.salesforce.com/            # Salesforce instance. NOTE: Should be overwritten in CRT variables
+${username}              mkohler+crt@copado.com.maxtest
+${login_url}             https://copadocrt--maxtest.my.salesforce.com/            # Salesforce instance. NOTE: Should be overwritten in CRT variables
 ${home_url}              ${login_url}/lightning/page/home
 
 
