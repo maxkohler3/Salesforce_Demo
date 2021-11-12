@@ -165,6 +165,24 @@ Create A Contact For The Account
     ClickText                 Contacts
     VerifyText                Richard Brown
 
+Delete Test Data
+    [tags]                    Test data
+    Appstate                  Home
+    LaunchApp                 Sales
+    ClickUntil                Recently Viewed             Accounts
+
+    Set Suite Variable        ${data}                     Salesforce
+    RunBlock                  NoData                      timeout=180s                exp_handler=DeleteData
+    Set Suite Variable        ${data}                     Growmore
+    RunBlock                  NoData                      timeout=180s                exp_handler=DeleteData
+
+    ClickText                 Opportunities
+    VerifyText                0 items
+    VerifyNoText              Safesforce Pace
+    VerifyNoText              Growmore Pace
+    VerifyNoText              Richard Brown
+    VerifyNoText              Larry Smith
+
 #Delete Test Data
     #[tags]                    Test data
     #Appstate                  Home
