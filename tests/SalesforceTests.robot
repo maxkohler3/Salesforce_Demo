@@ -54,8 +54,8 @@ Converting A Lead To Opportunity-Account-Contact
     ClickUntil                Convert Lead                Convert
     ClickText                 Opportunity                 2
     TypeText                  Opportunity Name            Growmore Pace
-    ClickText                 Convert                     2
-    VerifyText                Your lead has been converted         timeout=30
+    ClickUntil                Your lead has been converted                 Convert                     2
+    #VerifyText                Your lead has been converted         timeout=30
 
     ClickText                 Go to Leads
     ClickText                 Opportunities
