@@ -10,6 +10,7 @@ ${BROWSER}               chrome
 ${username}              mkohler+crt@copado.com.maxtest
 ${login_url}             https://copadocrt--maxtest.my.salesforce.com/            # Salesforce instance. NOTE: Should be overwritten in CRT variables
 ${home_url}              ${login_url}/lightning/page/home
+${last_name}             
 
 
 *** Keywords ***
