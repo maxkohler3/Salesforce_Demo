@@ -126,7 +126,7 @@ Change status of opportunity
 
     ClickText                 Show actions for this object
     ClickText                 Add Contact Roles
-    TypeText                  Search Contacts...          Tina    delay=2
+    TypeText                  Search Contacts...          Tom    delay=2
     ClickText                 Tom Smith
     ClickText                 Next                        delay=3
     ClickText                 Edit Role: Item 1
