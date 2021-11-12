@@ -166,28 +166,28 @@ Create A Contact For The Account
     ClickText                 Contacts
     VerifyText                Richard Brown
 
-Delete Test Data
-    [tags]                    Test data
-    Appstate                  Home
-    LaunchApp                 Sales
-    ClickText                 Accounts
+#Delete Test Data
+    #[tags]                    Test data
+    #Appstate                  Home
+    #LaunchApp                 Sales
+    #ClickText                 Accounts
 
-    Set Suite Variable        ${data}                     Salesforce
-    RunBlock                  NoData                      timeout=180s                exp_handler=DeleteAccounts
-    Set Suite Variable        ${data}                     Growmore
-    RunBlock                  NoData                      timeout=180s                exp_handler=DeleteAccounts
+    #Set Suite Variable        ${data}                     Salesforce
+    #RunBlock                  NoData                      timeout=180s                exp_handler=DeleteAccounts
+    #Set Suite Variable        ${data}                     Growmore
+    #RunBlock                  NoData                      timeout=180s                exp_handler=DeleteAccounts
 
-    ClickText                 Opportunities
-    VerifyText                0 items
-    VerifyNoText              Safesforce Pace
-    VerifyNoText              Growmore Pace
-    VerifyNoText              Richard Brown
-    VerifyNoText              ${first_name} Smith
+    #ClickText                 Opportunities
+    #VerifyText                0 items
+    #VerifyNoText              Safesforce Pace
+    #VerifyNoText              Growmore Pace
+    #VerifyNoText              Richard Brown
+    #VerifyNoText              ${first_name} Smith
 
     # Delete Leads
-    ClickText                 Leads
-    VerifyText                Change Owner
-    Set Suite Variable        ${data}                     ${first_name} Smith
-    RunBlock                  NoData                      timeout=180s                exp_handler=DeleteLeads
-    Set Suite Variable        ${data}                     John Doe
-    RunBlock                  NoData                      timeout=180s                exp_handler=DeleteLeads
+    #ClickText                 Leads
+    #VerifyText                Change Owner
+    #Set Suite Variable        ${data}                     ${first_name} Smith
+    #RunBlock                  NoData                      timeout=180s                exp_handler=DeleteLeads
+    #Set Suite Variable        ${data}                     John Doe
+    #RunBlock                  NoData                      timeout=180s                exp_handler=DeleteLeads
