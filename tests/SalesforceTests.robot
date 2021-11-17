@@ -14,7 +14,7 @@ Entering A Lead
     ClickUntil           Lead Information        New
     UseModal             On                      #Only find fields from open modal dialog
 
-    Picklist             Salutation              Esq.    timeout=1  #click element until it succeeds or timeout is met
+    Picklist             Salutation              Mr.
     TypeText             First Name              Ronald    
     TypeText             Last Name               Westin
     Picklist             Lead Status             Qualified
