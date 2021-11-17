@@ -10,34 +10,34 @@ Entering A Lead
     VerifyText           Home
     LaunchApp            Sales
 
-    ClickUntil           Recently Viewed            Leads
-    ClickUntil           Lead Information           New
+    ClickUntil           Recently Viewed        Leads
+    ClickUntil           Lead Information       New
     UseModal             On                         #Only find fields from open modal dialog
 
-    Picklist             Salutation                  Mr.
-    TypeText             First Name                  Larry    
-    TypeText             Last Name                   Smith
-    Picklist             Lead Status                 Qualified
-    TypeText             Phone                       +12234567858449            First Name
-    TypeText             Company                     Growmore                   Last Name
-    TypeText             Title                       Manager                    Address Information
-    TypeText             Email                       Larry.smith@gmail.com        Rating
+    Picklist             Salutation              Esq.    timeout=1  #click element until it succeeds or timeout has passed
+    TypeText             First Name              Ronald    
+    TypeText             Last Name               Westin
+    Picklist             Lead Status             Qualified
+    TypeText             Phone                   +12234567858449            First Name
+    TypeText             Company                 Growmore                   Last Name
+    TypeText             Title                   Manager                    Address Information
+    TypeText             Email                   Ronald.Westin@gmail.com        Rating
     TypeText             Website                     https://www.growmore.com/
 
-    Picklist             Lead Source                 Partner
-    ClickText            Save                        partial_match=False
+    Picklist             Lead Source             Partner
+    ClickText            Save                    partial_match=False
     UseModal             Off
     Sleep                1
     
     ClickText            Details
-    VerifyField          Name                        Mr. Larry Smith
-    VerifyField          Lead Status                 Qualified
-    VerifyField          Phone                       +12234567858449
-    VerifyField          Company                     Growmore
-    VerifyField          Website                     https://www.growmore.com/
+    VerifyField          Name                    Mr. Ronald Westin
+    VerifyField          Lead Status             Qualified
+    VerifyField          Phone                   +12234567858449
+    VerifyField          Company                 Growmore
+    VerifyField          Website                 https://www.growmore.com/
 
     ClickText            Leads
-    VerifyText           Larry Smith
+    VerifyText           Ronald Westin
     VerifyText           Manager
     VerifyText           Growmore
 
@@ -47,7 +47,7 @@ Converting A Lead To Opportunity-Account-Contact
     LaunchApp            Sales
 
     ClickText            Leads
-    ClickText            Larry Smith
+    ClickText            Ronald Westin
 
     ClickUntil           Convert Lead                Convert
     ClickText            Opportunity                 2
@@ -61,7 +61,7 @@ Converting A Lead To Opportunity-Account-Contact
     ClickText            Accounts
     VerifyText           Growmore
     ClickText            Contacts
-    VerifyText           Larry Smith
+    VerifyText           Ronald Westin
 
 Creating An Account
     [tags]               Account
@@ -124,14 +124,14 @@ Change status of opportunity
 
     ClickText            Show actions for this object
     ClickText            Add Contact Roles
-    TypeText             Search Contacts...          Larry    delay=2
-    ClickText            Larry Smith
+    TypeText             Search Contacts...          Ronald    delay=2
+    ClickText            Ronald Westin
     ClickText            Next                        delay=3
     ClickText            Edit Role: Item 1
     ClickText            --None--
     ClickText            Decision Maker
     ClickText            Save                        partial_match=False
-    VerifyText           Larry Smith
+    VerifyText           Ronald Westin
 
     ClickText            Mark Stage as Complete
     ClickText            Opportunities
@@ -180,12 +180,12 @@ Create A Contact For The Account
     #VerifyNoText          Safesforce Pace
     #VerifyNoText          Growmore Pace
     #VerifyNoText          Richard Brown
-    #VerifyNoText          Larry Smith
+    #VerifyNoText          Ronald Westin
 
     # Delete Leads
     #ClickText             Leads
     #VerifyText            Change Owner
-    #Set Suite Variable    ${data}                     Larry Smith
+    #Set Suite Variable    ${data}                     Ronald Westin
     #RunBlock              NoData                      timeout=180s                exp_handler=DeleteLeads
     #Set Suite Variable    ${data}                     John Doe
     #RunBlock              NoData                      timeout=180s                exp_handler=DeleteLeads
