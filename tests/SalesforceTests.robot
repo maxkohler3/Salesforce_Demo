@@ -12,9 +12,9 @@ Entering A Lead
 
     ClickUntil           Recently Viewed         Leads
     ClickUntil           Lead Information        New
-    UseModal             On                         #Only find fields from open modal dialog
+    UseModal             On                      #Only find fields from open modal dialog
 
-    Picklist             Salutation              Esq.    timeout=1  #click element until it succeeds or timeout has passed
+    Picklist             Salutation              Esq.    timeout=1  #click element until it succeeds or timeout is met
     TypeText             First Name              Ronald    
     TypeText             Last Name               Westin
     Picklist             Lead Status             Qualified
@@ -22,12 +22,11 @@ Entering A Lead
     TypeText             Company                 Growmore                   Last Name
     TypeText             Title                   Manager                    Address Information
     TypeText             Email                   Ronald.Westin@gmail.com        Rating
-    TypeText             Website                     https://www.growmore.com/
+    TypeText             Website                 https://www.growmore.com/
 
     Picklist             Lead Source             Partner
     ClickText            Save                    partial_match=False
     UseModal             Off
-    Sleep                1
     
     ClickText            Details
     VerifyField          Name                    Mr. Ronald Westin
