@@ -10,8 +10,8 @@ Entering A Lead
     VerifyText           Home
     LaunchApp            Sales
 
-    ClickUntil           Recently Viewed        Leads
-    ClickUntil           Lead Information       New
+    ClickUntil           Recently Viewed         Leads
+    ClickUntil           Lead Information        New
     UseModal             On                         #Only find fields from open modal dialog
 
     Picklist             Salutation              Esq.    timeout=1  #click element until it succeeds or timeout has passed
