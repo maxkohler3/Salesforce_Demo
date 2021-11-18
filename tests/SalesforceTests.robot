@@ -15,13 +15,13 @@ Entering A Lead
     UseModal             On                      #Only find fields from open modal dialog
 
     Picklist             Salutation              Mr.
-    TypeText             First Name              Ronald    
+    TypeText             First Name              John    
     TypeText             Last Name               Westin
     Picklist             Lead Status             Qualified
     TypeText             Phone                   +12234567858449            First Name
     TypeText             Company                 Growmore                   Last Name
     TypeText             Title                   Manager                    Address Information
-    TypeText             Email                   Ronald.Westin@gmail.com        Rating
+    TypeText             Email                   John.Westin@gmail.com        Rating
     TypeText             Website                 https://www.growmore.com/
 
     Picklist             Lead Source             Partner
@@ -29,14 +29,14 @@ Entering A Lead
     UseModal             Off
     
     ClickText            Details
-    VerifyField          Name                    Mr. Ronald Westin
+    VerifyField          Name                    Mr. John Westin
     VerifyField          Lead Status             Qualified
     VerifyField          Phone                   +12234567858449
     VerifyField          Company                 Growmore
     VerifyField          Website                 https://www.growmore.com/
 
     ClickText            Leads
-    VerifyText           Ronald Westin
+    VerifyText           John Westin
     VerifyText           Manager
     VerifyText           Growmore
 
@@ -46,13 +46,12 @@ Converting A Lead To Opportunity-Account-Contact
     LaunchApp            Sales
 
     ClickText            Leads
-    ClickText            Ronald Westin
+    ClickText            John Westin
 
     ClickUntil           Convert Lead                Convert
     ClickText            Opportunity                 2
     TypeText             Opportunity Name            Growmore Pace
     ClickUntil           Your lead has been converted                 Convert                     2
-    #VerifyText           Your lead has been converted         timeout=30
 
     ClickText            Go to Leads
     ClickText            Opportunities
@@ -60,7 +59,7 @@ Converting A Lead To Opportunity-Account-Contact
     ClickText            Accounts
     VerifyText           Growmore
     ClickText            Contacts
-    VerifyText           Ronald Westin
+    VerifyText           John Westin
 
 Creating An Account
     [tags]               Account
@@ -123,14 +122,14 @@ Change status of opportunity
 
     ClickText            Show actions for this object
     ClickText            Add Contact Roles
-    TypeText             Search Contacts...          Ronald    delay=2
-    ClickText            Ronald Westin
+    TypeText             Search Contacts...          John    delay=2
+    ClickText            John Westin
     ClickText            Next                        delay=3
     ClickText            Edit Role: Item 1
     ClickText            --None--
     ClickText            Decision Maker
     ClickText            Save                        partial_match=False
-    VerifyText           Ronald Westin
+    VerifyText           John Westin
 
     ClickText            Mark Stage as Complete
     ClickText            Opportunities
@@ -158,33 +157,33 @@ Create A Contact For The Account
 
     TypeText             Email                       richard.brown@gmail.com     anchor=Reports To
     TypeText             Title                       Manager
-    ClickText            Save                        partial_match=False
+    ClickUntil           was created                 Save                        partial_match=False
     Sleep                1
     ClickText            Contacts
     VerifyText           Richard Brown
 
-#Delete Test Data
-    #[tags]                Test data
-    #Appstate              Home
-    #LaunchApp             Sales
-    #ClickText             Accounts
+Delete Test Data
+    [tags]                Test data
+    Appstate              Home
+    LaunchApp             Sales
+    ClickText             Accounts
 
-    #Set Suite Variable    ${data}                     Salesforce
-    #RunBlock              NoData                      timeout=180s                exp_handler=DeleteAccounts
-    #Set Suite Variable    ${data}                     Growmore
-    #RunBlock              NoData                      timeout=180s                exp_handler=DeleteAccounts
+    Set Suite Variable    ${data}                     Salesforce
+    RunBlock              NoData                      timeout=180s                exp_handler=DeleteAccounts
+    Set Suite Variable    ${data}                     Growmore
+    RunBlock              NoData                      timeout=180s                exp_handler=DeleteAccounts
 
-    #ClickText             Opportunities
-    #VerifyText            0 items
-    #VerifyNoText          Safesforce Pace
-    #VerifyNoText          Growmore Pace
-    #VerifyNoText          Richard Brown
-    #VerifyNoText          Ronald Westin
+    ClickText             Opportunities
+    VerifyText            0 items
+    VerifyNoText          Safesforce Pace
+    VerifyNoText          Growmore Pace
+    VerifyNoText          Richard Brown
+    VerifyNoText          John Westin
 
-    # Delete Leads
-    #ClickText             Leads
-    #VerifyText            Change Owner
-    #Set Suite Variable    ${data}                     Ronald Westin
-    #RunBlock              NoData                      timeout=180s                exp_handler=DeleteLeads
-    #Set Suite Variable    ${data}                     John Doe
-    #RunBlock              NoData                      timeout=180s                exp_handler=DeleteLeads
+    Delete Leads
+    ClickText             Leads
+    VerifyText            Change Owner
+    Set Suite Variable    ${data}                     John Westin
+    RunBlock              NoData                      timeout=180s                exp_handler=DeleteLeads
+    Set Suite Variable    ${data}                     John Doe
+    RunBlock              NoData                      timeout=180s                exp_handler=DeleteLeads
