@@ -15,13 +15,13 @@ Entering A Lead
     UseModal             On                      #Only find fields from open modal dialog
 
     Picklist             Salutation              Mr.
-    TypeText             First Name              John    
+    TypeText             First Name              Bert    
     TypeText             Last Name               Westin
     Picklist             Lead Status             Qualified
     TypeText             Phone                   +12234567858449            First Name
     TypeText             Company                 Growmore                   Last Name
     TypeText             Title                   Manager                    Address Information
-    TypeText             Email                   John.Westin@gmail.com        Rating
+    TypeText             Email                   Bert.Westin@gmail.com        Rating
     TypeText             Website                 https://www.growmore.com/
 
     Picklist             Lead Source             Partner
@@ -29,14 +29,14 @@ Entering A Lead
     UseModal             Off
     
     ClickText            Details
-    VerifyField          Name                    Mr. John Westin
+    VerifyField          Name                    Mr. Bert Westin
     VerifyField          Lead Status             Qualified
     VerifyField          Phone                   +12234567858449
     VerifyField          Company                 Growmore
     VerifyField          Website                 https://www.growmore.com/
 
     ClickText            Leads
-    VerifyText           John Westin
+    VerifyText           Bert Westin
     VerifyText           Manager
     VerifyText           Growmore
 
@@ -46,7 +46,7 @@ Converting A Lead To Opportunity-Account-Contact
     LaunchApp            Sales
 
     ClickText            Leads
-    ClickText            John Westin
+    ClickText            Bert Westin
 
     ClickUntil           Convert Lead                Convert
     ClickText            Opportunity                 2
@@ -59,7 +59,7 @@ Converting A Lead To Opportunity-Account-Contact
     ClickText            Accounts
     VerifyText           Growmore
     ClickText            Contacts
-    VerifyText           John Westin
+    VerifyText           Bert Westin
 
 Creating An Account
     [tags]               Account
@@ -122,14 +122,14 @@ Change status of opportunity
 
     ClickText            Show actions for this object
     ClickText            Add Contact Roles
-    TypeText             Search Contacts...          John    delay=2
-    ClickText            John Westin
+    TypeText             Search Contacts...          Bert    delay=2
+    ClickText            Bert Westin
     ClickText            Next                        delay=3
     ClickText            Edit Role: Item 1
     ClickText            --None--
     ClickText            Decision Maker
     ClickText            Save                        partial_match=False
-    VerifyText           John Westin
+    VerifyText           Bert Westin
 
     ClickText            Mark Stage as Complete
     ClickText            Opportunities
@@ -178,12 +178,12 @@ Delete Test Data
     VerifyNoText          Safesforce Pace
     VerifyNoText          Growmore Pace
     VerifyNoText          Richard Brown
-    VerifyNoText          John Westin
+    VerifyNoText          Bert Westin
 
     Delete Leads
     ClickText             Leads
     VerifyText            Change Owner
-    Set Suite Variable    ${data}                     John Westin
+    Set Suite Variable    ${data}                     Bert Westin
     RunBlock              NoData                      timeout=180s                exp_handler=DeleteLeads
-    Set Suite Variable    ${data}                     John Doe
+    Set Suite Variable    ${data}                     Bert Doe
     RunBlock              NoData                      timeout=180s                exp_handler=DeleteLeads
