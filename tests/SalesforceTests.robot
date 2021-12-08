@@ -180,7 +180,7 @@ Delete Test Data
     VerifyNoText          Richard Brown
     VerifyNoText          Ron Washington
 
-    Delete Leads
+    # Delete Leads
     ClickText             Leads
     VerifyText            Change Owner
     Set Suite Variable    ${data}                     Ron Washington
