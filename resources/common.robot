@@ -26,7 +26,7 @@ End suite
 Login
     [Documentation]      Login to Salesforce instance
     GoTo                 ${login_url}
-    TypeText             Username                    ${username}
+    TypeText             Username                    ${username}             delay=1
     TypeText             Password                    ${password}
     ClickText            Log In
 
