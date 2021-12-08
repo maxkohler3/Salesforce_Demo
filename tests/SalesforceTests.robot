@@ -21,7 +21,7 @@ Entering A Lead
     TypeText             Phone                   +12234567858449            First Name
     TypeText             Company                 Growmore                   Last Name
     TypeText             Title                   Manager                    Address Information
-    TypeText             Email                   Ron.Washington@gmail.com        Rating
+    TypeText             Email                   Ron.Washington@gmail.com   Rating
     TypeText             Website                 https://www.growmore.com/
 
     Picklist             Lead Source             Partner
