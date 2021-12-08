@@ -27,6 +27,7 @@ Entering A Lead
     Picklist             Lead Source             Partner
     ClickText            Save                    partial_match=False
     UseModal             Off
+    Sleep                1
     
     ClickText            Details
     VerifyField          Name                    Mr. Ron Washington
