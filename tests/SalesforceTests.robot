@@ -185,5 +185,5 @@ Delete Test Data
     VerifyText            Change Owner
     Set Suite Variable    ${data}                     Ron Washington
     RunBlock              NoData                      timeout=180s                exp_handler=DeleteLeads
-    Set Suite Variable    ${data}                     Ron Doe
+    Set Suite Variable    ${data}                     John Doe
     RunBlock              NoData                      timeout=180s                exp_handler=DeleteLeads
