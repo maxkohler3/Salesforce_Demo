@@ -15,13 +15,13 @@ Entering A Lead
     UseModal             On                      #Only find fields from open modal dialog
 
     Picklist             Salutation              Mr.
-    TypeText             First Name              Ron    
+    TypeText             First Name              Tim    
     TypeText             Last Name               Washington
     Picklist             Lead Status             Qualified
     TypeText             Phone                   +12234567858449            First Name
     TypeText             Company                 Growmore                   Last Name
     TypeText             Title                   Manager                    Address Information
-    TypeText             Email                   Ron.Washington@gmail.com   Rating
+    TypeText             Email                   Tim.Washington@gmail.com   Rating
     TypeText             Website                 https://www.growmore.com/
 
     Picklist             Lead Source             Partner
@@ -30,7 +30,7 @@ Entering A Lead
     Sleep                1
     
     ClickText            Details
-    VerifyField          Name                    Mr. Ron Washington
+    VerifyField          Name                    Mr. Tim Washington
     VerifyField          Lead Status             Qualified
     VerifyField          Phone                   +12234567858449
     VerifyField          Company                 Growmore
@@ -41,7 +41,7 @@ Entering A Lead
     Should Match Regexp	      ${phone_num}	              ^[+]\\d{14}
 
     ClickText            Leads
-    VerifyText           Ron Washington
+    VerifyText           Tim Washington
     VerifyText           Manager
     VerifyText           Growmore
 
@@ -51,7 +51,7 @@ Converting A Lead To Opportunity-Account-Contact
     LaunchApp            Sales
 
     ClickText            Leads
-    ClickText            Ron Washington
+    ClickText            Tim Washington
 
     ClickUntil           Convert Lead                Convert
     ClickText            Opportunity                 2
@@ -64,7 +64,7 @@ Converting A Lead To Opportunity-Account-Contact
     ClickText            Accounts
     VerifyText           Growmore
     ClickText            Contacts
-    VerifyText           Ron Washington
+    VerifyText           Tim Washington
 
 Creating An Account
     [tags]               Account
@@ -127,14 +127,14 @@ Change status of opportunity
 
     ClickText            Show actions for this object
     ClickText            Add Contact Roles
-    TypeText             Search Contacts...          Ron    delay=2
-    ClickText            Ron Washington
+    TypeText             Search Contacts...          Tim    delay=2
+    ClickText            Tim Washington
     ClickText            Next                        delay=3
     ClickText            Edit Role: Item 1
     ClickText            --None--
     ClickText            Decision Maker
     ClickText            Save                        partial_match=False
-    VerifyText           Ron Washington
+    VerifyText           Tim Washington
 
     ClickText            Mark Stage as Complete
     ClickText            Opportunities
@@ -183,12 +183,12 @@ Delete Test Data
     VerifyNoText          Safesforce Pace
     VerifyNoText          Growmore Pace
     VerifyNoText          Richard Brown
-    VerifyNoText          Ron Washington
+    VerifyNoText          Tim Washington
 
     # Delete Leads
     ClickText             Leads
     VerifyText            Change Owner
-    Set Suite Variable    ${data}                     Ron Washington
+    Set Suite Variable    ${data}                     Tim Washington
     RunBlock              NoData                      timeout=180s                exp_handler=DeleteLeads
     Set Suite Variable    ${data}                     John Doe
     RunBlock              NoData                      timeout=180s                exp_handler=DeleteLeads
