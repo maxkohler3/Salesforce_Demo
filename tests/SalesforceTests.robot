@@ -8,7 +8,6 @@ Entering A Lead
     [tags]               Lead
     Appstate             Login
     VerifyText           Home
-    LaunchApp            Sales
 
     ClickUntil           Recently Viewed         Leads
     ClickUntil           Lead Information        New
