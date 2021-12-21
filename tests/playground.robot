@@ -5,7 +5,7 @@ Suite Teardown                End suite
 
 *** Test Cases ***
 Dev Console
-    OpenBrowser          http://google.com    chrome
+    #OpenBrowser          http://google.com    chrome
     Appstate             Login
     ClickText    Setup
     SwitchWindow         2
