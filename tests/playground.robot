@@ -5,6 +5,7 @@ Suite Teardown                End suite
 
 *** Test Cases ***
 Dev Console
+    OpenBrowser          http://google.com    chrome
     Appstate             Login
     ClickText    Setup
     SwitchWindow         2
@@ -17,6 +18,7 @@ Dev Console
     SwitchWindow         1
     ${url}=   GetUrl
     Log       ${url}
-    ${OppID}=    GetText     https://copadocrt--maxtest.lightning.force.com/    between=lightning/???/home
+    ${OppID}=    Fetch From Right   ${url}  between=lightning/???/home
+    Log          ${OppID}
     SwitchWindow             2
     
