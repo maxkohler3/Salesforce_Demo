@@ -4,6 +4,16 @@ Suite Setup                   Setup Browser
 Suite Teardown                End suite
 
 *** Test Cases ***
+
+TC1
+    [Documentation]    Cisco Workshop
+    Appstate           Login
+    ClickText    App Launcher
+    TypeText     Search apps and items...    cred
+    ClickText    Credentials
+    ClickText    Select List View
+    ClickText    Selected
+
 Dev Console
     Appstate        Login
     ClickText       Setup
