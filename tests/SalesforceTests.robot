@@ -8,11 +8,10 @@ Entering A Lead
     [tags]               Lead
     Appstate             Login
     MFA Login
-
     ClickUntil           Recently Viewed         Leads
     ClickUntil           Lead Information        New
-    UseModal             On                      #Only find fields from open modal dialog
 
+    UseModal             On                      #Only find fields from open modal dialog
     Picklist             Salutation              Mr.
     TypeText             First Name              Tim    
     TypeText             Last Name               Washington
@@ -22,7 +21,6 @@ Entering A Lead
     TypeText             Title                   Manager                    Address Information
     TypeText             Email                   Tim.Washington@gmail.com   Rating
     TypeText             Website                 https://www.growmore.com/
-
     Picklist             Lead Source             Partner
     ClickText            Save                    partial_match=False
     UseModal             Off
