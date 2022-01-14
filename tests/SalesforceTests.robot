@@ -6,7 +6,7 @@ Suite Teardown                End suite
 *** Test Cases ***
 Entering A Lead
     [tags]               Lead
-    Appstate             Home
+    Appstate             Login
     MFA Login
 
     ClickUntil           Recently Viewed         Leads
