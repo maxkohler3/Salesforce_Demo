@@ -25,7 +25,7 @@ Entering A Lead
     ClickText            Save                    partial_match=False
     UseModal             Off
     Sleep                1
-    
+  
     ClickText            Details
     VerifyField          Name                    Mr. Tim Washington
     VerifyField          Lead Status             Qualified
