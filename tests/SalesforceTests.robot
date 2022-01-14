@@ -6,8 +6,8 @@ Suite Teardown                End suite
 *** Test Cases ***
 Entering A Lead
     [tags]               Lead
-    Appstate             Login
-    VerifyText           Home
+    Appstate             Home
+    MFA Login
 
     ClickUntil           Recently Viewed         Leads
     ClickUntil           Lead Information        New
