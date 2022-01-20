@@ -16,7 +16,7 @@ Entering A Lead
     TypeText             First Name              Tim    
     TypeText             Last Name               Washington
     Picklist             Lead Status             Qualified
-    TypeText             Phone                   18001234567            
+    TypeText             Phone                   +12234567858449            
     TypeText             Company                 Growmore                   
     TypeText             Title                   Manager                    
     TypeText             Email                   Tim.Washington@gmail.com   
