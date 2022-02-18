@@ -81,6 +81,7 @@ DeleteAccounts
 DeleteLeads
     [Documentation]       RunBlock to remove all data until it doesn't exist anymore
     ClickText             ${data}
+    ClickText             Show more actions
     ClickText             Delete
     VerifyText            Are you sure you want to delete this lead?
     ClickText             Delete                      2
