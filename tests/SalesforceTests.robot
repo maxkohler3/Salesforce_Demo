@@ -33,7 +33,7 @@ Entering A Lead
     
     ClickText                 Details
     VerifyField               Name                        Ms. Tina Smith
-    VerifyField               Lead Status                 Open
+    VerifyField               Lead Status                 New
     VerifyField               Phone                       +12234567858449
     VerifyField               Company                     Growmore
     VerifyField               Website                     https://www.growmore.com/
