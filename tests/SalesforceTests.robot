@@ -20,7 +20,7 @@ Entering A Lead
     TypeText                  First Name                  Tina
     TypeText                  Last Name                   Smith
     Picklist                  Lead Status                 New
-    TypeText                  Phone                       +12234567858449             First Name
+    TypeText                  Phone                       4041234567                  First Name
     TypeText                  Company                     Growmore                    Last Name
     TypeText                  Title                       Manager                     Address Information
     TypeText                  Email                       tina.smith@gmail.com        Rating
@@ -34,14 +34,10 @@ Entering A Lead
     ClickText                 Details
     VerifyField               Name                        Ms. Tina Smith
     VerifyField               Lead Status                 New
-    VerifyField               Phone                       +12234567858449
+    VerifyField               Phone                       4041234567
     VerifyField               Company                     Growmore
     VerifyField               Website                     https://www.growmore.com/
-
-    # as an example, let's check Phone number format. Should be "+" and 14 numbers
-    ${phone_num}=             GetFieldValue               Phone
-    Should Match Regexp	      ${phone_num}	              ^[+]\\d{14}$
-    
+   
     ClickText                 Leads
     VerifyText                Tina Smith
     VerifyText                Manager
@@ -79,9 +75,9 @@ Creating An Account
     ClickText                 Accounts
     ClickUntil                Account Information         New
 
-    TypeText                  Account Name                Salesforce                  anchor=Parent Account
-    TypeText                  Phone                       +12258443456789             anchor=Fax
-    TypeText                  Fax                         +12258443456766
+    TypeText                  Account Name                Salesforce             anchor=Parent Account
+    TypeText                  Phone                       4041234567             anchor=Fax
+    TypeText                  Fax                         4041234567
     TypeText                  Website                     https://www.salesforce.com
     Picklist                  Type                        Partner
     Picklist                  Industry                    Finance
@@ -107,7 +103,7 @@ Creating An Opportunity For The Account
     ClickUntil                Opportunity Information     New
     TypeText                  Opportunity Name            Safesforce Pace             anchor=Cancel   delay=2
     TypeText                  Search Accounts...          Salesforce                  check=False
-    ClickText                 +12258443456789
+    ClickText                 4041234567
     Picklist                  Type                        New Business
     ClickText                 Close Date                  Opportunity Information
     ClickText                 Next Month
@@ -163,10 +159,10 @@ Create A Contact For The Account
     Picklist                  Salutation                  Mr.
     TypeText                  First Name                  Richard
     TypeText                  Last Name                   Brown
-    TypeText                  Phone                       +00150345678134             anchor=Mobile
-    TypeText                  Mobile                      +00150345678178
-    TypeText                  Search Accounts...          Salesforce                  check=False
-    ClickText                 +12258443456789
+    TypeText                  Phone                       4041234567             anchor=Mobile
+    TypeText                  Mobile                      4041234567
+    TypeText                  Search Accounts...          Salesforce             check=False
+    ClickText                 4041234567
 
     TypeText                  Email                       richard.brown@gmail.com     anchor=Reports To
     TypeText                  Title                       Manager
