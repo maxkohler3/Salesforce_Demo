@@ -34,15 +34,9 @@ Entering A Lead
     ClickText                 Details
     VerifyField               Name                        Ms. Tina Smith
     VerifyField               Lead Status                 New
-    VerifyField               Phone                       4041234567
     VerifyField               Company                     Growmore
     VerifyField               Website                     https://www.growmore.com/
-   
-    ClickText                 Leads
-    VerifyText                Tina Smith
-    VerifyText                Manager
-    VerifyText                Growmore
-
+    VerifyField               Email                       tina.smith@gmail.com
 
 Converting A Lead To Opportunity-Account-Contact
     [tags]                    Lead
