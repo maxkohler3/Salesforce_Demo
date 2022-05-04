@@ -1,6 +1,7 @@
 *** Settings ***
 Library                   QWeb
 Library                   QForce
+Library                   QVision
 Library                   String
 Library                   DateTime
 Library                   FakerLibrary
