@@ -3,6 +3,7 @@ Library                   QWeb
 Library                   QForce
 Library                   String
 Library                   DateTime
+Library                   FakerLibrary
 
 
 *** Variables ***
