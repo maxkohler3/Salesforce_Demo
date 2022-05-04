@@ -5,6 +5,7 @@ Library                   QVision
 Library                   String
 Library                   DateTime
 Library                   FakerLibrary
+Library                   Collections
 
 
 *** Variables ***
