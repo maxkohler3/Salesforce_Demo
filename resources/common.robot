@@ -16,6 +16,7 @@ ${first_name}            Thomas
 
 *** Keywords ***
 Setup Browser
+    Set Library Search Order    QWeb
     Open Browser          about:blank                 ${BROWSER}
     SetConfig             LineBreak                   ${EMPTY}               #\ue000
     SetConfig             DefaultTimeout              20s                    #sometimes salesforce is slow
