@@ -7,8 +7,13 @@ Suite Teardown                End suite
 *** Test Cases ***
 Entering A Lead
     [tags]               Lead   Smoke   Regression
-    Login
-    MFA Login
+    ${address} =  FakerLibrary.address
+    ${country} =  FakerLibrary.country
+    ${email} =  FakerLibrary.email
+    ${first_name} =  FakerLibrary.first_name
+    ${last_name} =  FakerLibrary.last_name
+    ${phone_number} =  FakerLibrary.phone_number
+    Home
     LaunchApp            Sales
 
     ClickText            Leads
