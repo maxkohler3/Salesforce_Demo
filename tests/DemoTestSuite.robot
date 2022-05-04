@@ -63,8 +63,9 @@ Elsevier Test Case 2
     ClickText             New
     UseModal
     ${salutation_options}=            GetPickList           Salutation 
-    @{salutation_list}                Create List           ${salutation_options}
+    @{salutation_list}                Convert to List           ${salutation_options}
     FOR    ${salutation}      IN    @{salutation_list}             
         PickList            Salutation           ${salutation}
-        VerifyPickList      Salutation                      ${salutation}
+        VerifyPickList      Salutation           ${salutation}
+        LogScreenshot
     END
