@@ -5,14 +5,15 @@ Suite Teardown                End suite
 
 
 *** Test Cases ***
+
+FakerLibrary Words Generation
+    ${words}=    FakerLibrary.Words
+    Log    words: ${words}
+    ${words}=    FakerLibrary.Words    nb=${10}
+    Log    words: ${words}
+
 Entering A Lead
     [tags]               Lead   Smoke   Regression
-    ${address} =  FakerLibrary.address
-    ${country} =  FakerLibrary.country
-    ${email} =  FakerLibrary.email
-    ${first_name} =  FakerLibrary.first_name
-    ${last_name} =  FakerLibrary.last_name
-    ${phone_number} =  FakerLibrary.phone_number
     Home
     LaunchApp            Sales
 
