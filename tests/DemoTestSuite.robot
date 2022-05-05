@@ -15,7 +15,7 @@ Elsevier Test Case 1
     Hotkey                 enter
 
     ClickText              List View Controls
-    ClickText              New                        anchor=Clone
+    ClickText              New                        anchor=Clone      delay=2
     UseModal               On
     VerifyText             List Name
     VerifyText             List API Name
