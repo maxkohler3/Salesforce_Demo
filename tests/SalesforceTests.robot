@@ -5,13 +5,6 @@ Suite Teardown                End suite
 
 
 *** Test Cases ***
-
-FakerLibrary Words Generation
-    ${words}=    FakerLibrary.Words
-    Log    words: ${words}
-    ${words}=    FakerLibrary.Words    nb=${10}
-    Log    words: ${words}
-
 Entering A Lead
     [tags]               Lead   Smoke   Regression
     Home
@@ -199,3 +192,9 @@ Delete Test Data
     RunBlock              NoData                      timeout=180s                exp_handler=DeleteLeads
     Set Suite Variable    ${data}                     John Doe
     RunBlock              NoData                      timeout=180s                exp_handler=DeleteLeads
+
+FakerLibrary Words Generation
+    ${words}=    FakerLibrary.Words
+    Log    words: ${words}
+    ${words}=    FakerLibrary.Words    nb=${10}
+    Log    words: ${words}
