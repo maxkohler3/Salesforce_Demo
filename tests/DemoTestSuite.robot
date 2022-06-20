@@ -5,8 +5,7 @@ Suite Teardown             End suite
 
 
 *** Test Cases ***
-
-Elsevier Test Case 1
+Test Opportunity UI
     Home
     ClickText              Opportunities
     ClickText              Select a List View
@@ -57,7 +56,7 @@ Elsevier Test Case 1
     VerifyField            Account Name                Growmore             partial_match=true
 
 
-Elsevier Test Case 2
+Verify Picklist Options 
     Home
     ClickText             Leads
     ClickText             New
