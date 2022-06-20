@@ -5,7 +5,7 @@ Suite Teardown             End suite
 
 
 *** Test Cases ***
-Test Opportunity UI
+Test Opportunity components
     Home
     ClickText              Opportunities
     ClickText              Select a List View
@@ -54,17 +54,3 @@ Test Opportunity UI
     VerifyField            Close Date                  12/31/2021
     VerifyField            Opportunity Owner           Max Kohler           partial_match=true                     
     VerifyField            Account Name                Growmore             partial_match=true
-
-
-Verify Picklist Options 
-    Home
-    ClickText             Leads
-    ClickText             New
-    UseModal
-    ${salutation_options}=            GetPickList           Salutation 
-    @{salutation_list}                Convert to List           ${salutation_options}
-    FOR    ${salutation}      IN    @{salutation_list}             
-        PickList            Salutation           ${salutation}
-        VerifyPickList      Salutation           ${salutation}
-        LogScreenshot
-    END
