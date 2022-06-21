@@ -5,45 +5,22 @@ Suite Teardown             End suite
 
 
 *** Test Cases ***
-Test Opportunity components
+Entering A Lead
     Home
-    ClickText              Opportunities
-    ClickText              Select a List View
-    ClickText              All Opportunities
-    TypeText               Search this list...  Growmore
-    Hotkey                 enter
+    LaunchApp            Sales
+    ClickText            Leads
+    VerifyText           Change Owner
+    ClickUntil           Lead Information        New
 
-    ClickText              List View Controls
-    ClickText              New                  anchor=Clone      delay=2
-    UseModal               On
-    VerifyText             List Name
-    VerifyText             List API Name
-    VerifyText             Who sees this list view?
-    ClickText              Cancel
-    UseModal               Off
-    ClickText              Display as Table
-    ClickText              Kanban
-    VerifyText             Display as Kanban
-    LogScreenshot
-
-    ClickText              Display as Kanban
-    ClickText              Table
-    ClickText              Refresh
-    ClickText              Cancel
-    UseModal               Off
-
-    ClickText              New Case                    
-    UseModal               On
-    PickList               Status               Escalated
-    TypeText               Subject              New Case Demo
-    TypeText               Description          enter some info
-    ClickText              Cancel
-    UseModal               Off
-
-    ClickText              Details
-    VerifyField            Opportunity Name    Growmore Pace
-    VerifyField            Stage               Prospecting
-    VerifyField            Probability (%)     10%
-    VerifyField            Close Date          12/31/2021
-    VerifyField            Opportunity Owner   Max Kohler           partial_match=true                     
-    VerifyField            Account Name        Growmore             partial_match=true
+    UseModal             On                      #Only find fields from open modal dialog
+    Picklist             Salutation              Mr.
+    TypeText             First Name              Tim
+    TypeText             Last Name               Washington
+    Picklist             Lead Status             Qualified
+    TypeText             Phone                   +12234567858449
+    TypeText             Company                 Growmore
+    TypeText             Title                   Manager
+    TypeText             Email                   Tim.Washington@gmail.com
+    TypeText             Website                 https://www.growmore.com/
+    Picklist             Lead Source             Partner
+    ClickText            Cancel                    partial_match=False
