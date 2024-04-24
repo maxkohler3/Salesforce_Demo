@@ -28,11 +28,11 @@ End suite
     Close All Browsers
 
 
-Home
+Salesforce Home
     [Documentation]       Navigate to homepage, login if needed
     GoTo                  ${home_url}
     ${login_status} =     IsText                      To access this page, you have to log in to Salesforce.    2
-    Run Keyword If        ${login_status}             Login
+    Run Keyword If        ${login_status}             Salesforce Login
     ClickText             Home
     VerifyTitle           Home | Salesforce
 
