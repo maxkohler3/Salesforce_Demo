@@ -1,16 +1,17 @@
 *** Keywords ***
 
-Login
+Login to Salesforce
     [Documentation]       Login to Salesforce instance
-    GoTo                  ${login_url}
+    GoTo                  ${loginURL}
     TypeText              Username                    ${username}             delay=1
     TypeText              Password                    ${password}
     ClickText             Log In
-    # We'll check if variable ${secret} is given. If yes, fill the MFA dialog.
-    # If not, MFA is not expected.
-    # ${secret} is ${None} unless specifically given.
-    ${MFA_needed}=       Run Keyword And Return Status          Should Not Be Equal    ${None}       ${secret}
-    Run Keyword If       ${MFA_needed}               Fill MFA
+    ${isMFA}=  IsText     Verify Your Identity                          
+    IF  ${isMFA}                                                        
+        ${mfa_code}=    GetOTP    ${username}    ${MY_SECRET}    ${password}
+        TypeSecret      Code      ${mfa_code}
+        ClickText       Verify
+    END
 
 
 Login As
@@ -27,8 +28,3 @@ Login As
     VerifyText            Freeze                      timeout=45                        # this is slow, needs longer timeout          
     ClickText             Login                       anchor=Freeze          delay=1
 
-
-Fill MFA
-    ${mfa_code}=         GetOTP    ${username}   ${secret}   ${login_url}    
-    TypeSecret           Verification Code       ${mfa_code}      
-    ClickText            Verify 
