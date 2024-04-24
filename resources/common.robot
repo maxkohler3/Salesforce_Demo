@@ -62,3 +62,9 @@ DeleteLeads
     VerifyNoText          Undo
     ClickText             Leads                    partial_match=False
 
+Close All Salesforce Tabs
+    HotKey                      shift                       w
+    ${multiple_tabs}=           IsText                      Close all tabs?             5s
+    IF                          ${multiple_tabs}
+        ClickText               Close All
+    END
