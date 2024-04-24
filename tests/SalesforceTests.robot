@@ -2,9 +2,12 @@
 # before running this suite.
 
 *** Settings ***
-Resource                      ../resources/common.robot
-Suite Setup                   Setup Browser
-Suite Teardown                End suite
+Resource                    ../resources/common.robot
+Resource                    ../resources/flows.resource
+Resource                    ../resources/login_logout.resource
+Resource                    ../resources/ojects.resource
+Suite Setup                 Setup Browser
+Suite Teardown              End suite
 
 
 *** Test Cases ***
