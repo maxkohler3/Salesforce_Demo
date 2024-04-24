@@ -1,6 +1,6 @@
 *** Keywords ***
 
-Login to Salesforce
+Salesforce Login
     [Documentation]       Login to Salesforce instance
     GoTo                  ${loginURL}
     TypeText              Username                    ${username}             delay=1
